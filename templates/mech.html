@@ -1,0 +1,461 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  {% include "header.html" %}
+
+  <title>Mechnido</title>
+
+  <style type="text/css">
+    .form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da !important;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.contain
+  {
+  padding:30px;
+  font-family:'Roboto';
+  font-size:20px;
+  font-weight:300;
+  line-height:36px;
+    background:black;
+    color:red;
+  }
+  .contain p
+  {
+  margin-bottom:15px;
+    color:white;
+  }
+  .thumbanail
+  {
+  width:250px;
+  position:relative;
+  box-shadow:0 0 5px rgba(0,0,0,.4);
+  background-color:#fff;
+  overflow:hidden;
+  border-radius:8px;
+  margin-bottom:10px;
+  }
+  .thumbanail:before
+  {
+  content:'';
+  position:absolute;
+  
+  left:0;
+  width:100%;
+  height:100%;
+  border:8px solid #fff;
+  z-index:2;
+  overflow:hidden;
+  box-sizing:border-box;
+  }
+  .thumbanail img
+  {
+  width:100%;
+  height:auto;
+  border-radius:8px;
+  transform:scale(1) rotate(0deg);
+  transition:all .5s linear;
+  }
+  .thumbanail:hover img
+  {
+  transform:scale(1.1) rotate(-5deg);
+  }
+  .thumbanail.right
+  {
+  float:right;
+  margin-left:20px;
+  }
+  .thumbanail.left
+  {
+  float:left;
+  margin-right:20px;
+  }
+  @media screen and (max-width:767px)
+  {
+  .thumbanail.right
+  {
+  float:none;
+  margin-left:0px;
+  }
+  .thumbanail.left
+  {
+  float:none;
+  margin-right:0px;
+  }
+  .thumbanail{
+  width:100%;
+  }
+  }
+  
+  .video{
+    width:100%;
+    height:600px;
+    display:flex;
+    position:relative;
+    justify-content:center;
+    background:black;
+    
+  }
+  .video h1{
+    position:absolute;
+    z-index:0;
+    color:red;
+    margin:245px;
+    padding-top:10px;
+   
+    font-size:80px;
+  }
+  .container{
+    width:100%;
+    height:100vh;
+    background-image:url(https://cdn.wallpapersafari.com/96/69/WLRzuf.jpg);
+  background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    transition:15s;
+    
+    animation-name:animate ;
+    animation-direction: alternate-reverse;
+    animation-duration:30s ;
+    animation-fill-mode:forwards ;
+    animatiomn-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+  }
+  @keyframes animate{
+    
+    0%{
+      background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9ihqu82Mx6sv4FE3lG4sW5F5JA0Rfgz6Yjw&usqp=CAU);
+    }
+    30%{
+      background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmNGf2XqJrtkRcodHi7mm6g17Xw-oGApPl1Q&usqp=CAU);
+    }
+    60%{
+      background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZiYP9ykQ-yXYUKN49Xd1Va7k18EsiGbkesA&usqp=CAU);
+    }
+    90%{
+      background-image:url(https://image.winudf.com/v2/image/Y29tLnVsdHJhNGtXYWxscGFwZXJzX3NjcmVlbl8wXzE1MjY1OTAzODdfMDU0/screen-0.jpg?fakeurl=1&type=.webp);
+    }
+    120%{
+      background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5OuyF7hCb5zeLJWfTd_x1GYI4BjFV1uKq0w&usqp=CAU);
+    }
+    150%{
+      background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1IodAaOoL32wE_U8SCgJtTnohPRjaTFbGlA&usqp=CAU);
+    }
+    
+  }
+  .container{
+    width:100%;
+    margin:100px ;
+    text-align:center;
+    color:white;
+    border-radius:50px;
+  }
+  .container h1{
+    font-size:60px;
+    
+  }
+  .container h3{
+  width:60%;
+    margin:20px auto 100px;
+    line-height:35px;
+    font-size:17px;
+      color:red;
+  }
+  .carousel-item{
+    height:100vh;
+  }
+  img-box{
+    width:550px;
+  }
+  .pic-one{
+    width:100%;
+  }
+  .carousel-item .row{
+    margin:5% 0;
+  }
+  .carousel-item h1{
+    margin-top:40px;
+    font-weight:bold;
+  }
+  .carousel-item p{
+    margin:30px 0 60px;
+    font-weight:bold;
+    font-size:20px;
+  }
+  .carousel-item button{
+    padding:8px 20px;
+    background:red;
+    border:0;
+    border-radius:20px;
+    outline:none;
+    top:20%
+  }
+  .pic-two{
+    width:100%;
+  }    
+  marquee{
+    padding:20px;
+  } 
+  .head h1{
+   text-align:center;
+  }
+  .copy h2{
+    text-align:center;
+    font-family:Stencil Std, fantasy;
+    margin:30px;
+    background:red;
+    color:white;
+    border-radius:50px;
+  }
+  .copy-one h2{
+    text-align:center;
+    font-family:Stencil Std, fantasy;
+    margin:30px;
+    background:red;
+    color:white;
+    border-radius:50px;
+  }
+  .copy-two h2{
+    text-align:center;
+    font-family:Stencil Std, fantasy;
+    margin:30px;
+    background:red;
+    color:white;
+    border-radius:50px;
+  }
+  
+  
+  
+  
+  
+  @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+  
+  
+  .wav {
+    background:url(https://www.science.org/do/10.1126/article.22562/abs/sn-raindropsh.jpg)  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+    font-size: 60px;
+  }
+  .waviy span {
+    font-family: 'Alfa Slab One', cursive;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+    
+  }
+  @keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }
+  </style>
+  <body class="animsition">
+    {% include "nav.html"%}
+    <div class="video">
+       
+      <h1>MECHNIDO</h1>
+      <h2></h2>     
+    <video autoplay loop muted >
+        <source src="https://media.istockphoto.com/videos/abstract-3d-car-animation-video-id622472608" type="video/mp4">
+      </video>
+    </div>
+    <div class="container">
+      <h1>ABOUT US</h1>
+         <h3>M/S MECHNIDO is an Emerging Enterprise
+Started In 2018 At Coimbatore, Tamilnadu,
+Primarily To Cater The Captive Needs Of Local
+Industry. Early In Our Inception, We Carved A
+Unique Business Model To Success With The State
+Of The Art Infrastructure, A Team Of Young &
+Energitic Engineers And Wide Range Of Products
+With Excellence In Quality, Working In The Field
+Of Design And Fabrication Of Automobile Parts.
+We Are Customizing Motorsports Parts As Per The
+Requirements Of Customers Which Will Match
+Their Design, Comfort, And Priority As Well.</h3>
+      
+    </div>
+      <div class="contain">
+         <div class="thumbanail right">
+            <img src="https://thumbs.dreamstime.com/b/hand-holding-light-bulb-business-digital-marketing-innovation-technology-icons-network-hand-holding-light-bulb-business-138534565.jpg" alt="" />
+         </div>
+         <h4>INNOVATION</h4>
+         <p> We encourage change, always pursuing promising
+opportunities for clients, our partners and ourselves.          
+         </p>
+         <div class="thumbanail left">
+            <img src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_841152680_412199.jpg" alt="" />
+         </div>
+         <h4>OUR CULTURE</h4>
+         <p>
+           We embrace diversity and foster a culture that promotes
+teamwork and inclusion to pursue a common goal.
+         </p>
+     </div>
+     <div class="contain">
+         <div class="thumbanail right">
+            <img src="https://lynchburgbusinessmag.com/wp-content/uploads/2018/01/lb-marketing.jpg" alt="" />
+         </div>
+         <h4>INTEGRITY</h4>
+         <p>At the heart of everything we do, is an unshakable
+commitment to honesty, fairness and respect.           
+         </p>
+         <div class="thumbanail left">
+            <img src="https://cdn.ceoworld.biz/wp-content/uploads/2014/07/Business-Partnership.jpg" alt="" />
+         </div>
+         <h4>PARTNERSHIP</h4>
+         <p>
+          We create the future by working together and with our
+clients in an atmosphere of trust and confidence.
+         </p>
+     </div>
+       <!-- CSS only -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" >
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js">
+    </script>
+  </head>
+  <body>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active slide-one">
+      <div class="cont">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="animated bounce">MISSION</h1>
+            <p>To offer a sustainable self transportation
+possible for every citizen by making low
+cost electric vehicles.
+To be environmentally focused company
+that exceeds Statutory and Customer
+requirements.
+To inculcate knowledge on electric vehicles
+for every students through workshops.</p>
+            <button type="button">MISSION</button>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="https://www.business2community.com/wp-content/uploads/2014/03/mission_statement.png" class="pic-one">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item slide-two">
+      <div class="cont">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>VISION</h1>
+            <p>MECHNIDO aims to shine as a leading
+manufacturer of E- mobility and offer creative
+solutions in the field of automobiles.
+World drives through our products
+Driving the world by our products.</p>
+            <button type="button">VISION</button>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="https://www.boardeffect.com/wp-content/uploads/2019/12/What-is-a-Vision-Statement-and-Why-is-it-Important.jpg" class="pic-two">
+            
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+    </div>
+    
+    <div class="wav">
+ <div class="waviy">
+   <span style="--i:1">w</span>
+   <span style="--i:2">h</span>
+   <span style="--i:3">a</span>
+   <span style="--i:4">t</span>
+   <span style="--i:5"></span>
+   <span style="--i:6">w</span>
+   <span style="--i:7">e</span>
+   <span style="--i:8"></span>
+   <span style="--i:9">d</span>
+   <span style="--i:10">o</span>
+    </div>
+  </div>
+    
+    
+    
+    <div class="copy">
+       <marquee>
+      
+         <h2>RESEARCH & DEVEOPMENT</h2> 
+      <img src="https://etimg.etb2bimg.com/photo/69841284.cms"height="250px"width="250px">
+         <img src="https://www.researchgate.net/profile/Yeganeh-Ghandriz/publication/355433390/figure/fig1/AS:1098781789556740@1638981401823/Wide-observation-to-renewable-energy-sources.png" height="250px" width="250">
+      <img src="https://img.freepik.com/premium-vector/biodegradable-plastic-sign-icon-plastic-bottle-with-green-leaves-turns-plant-concept-eco-friendly-compostable-material-production-zero-waste-nature-protection-concept-vector_288189-396.jpg?w=2000"width="250px">
+     </marquee>
+    </div>
+   
+   
+     <div class="copy-one">
+       <marquee>
+      
+         <h2>MANUFACTURING</h2> 
+      <img src="https://www.wardsauto.com/sites/wardsauto.com/files/styles/article_featured_retina/public/auto%20parts.jpg?itok=QOiP01Zy" height="250px" width="250px">
+         <img src="https://media.istockphoto.com/vectors/vector-car-spares-concept-with-disk-brake-vector-id488844774?k=20&m=488844774&s=612x612&w=0&h=yiL4mnkFFAN5TNrqfOX-0WskE20mBSahOXTRye6xo3o=" height="250px" width="250">
+      <img src="https://5.imimg.com/data5/HK/XC/MY-2620215/auto-parts-500x500.jpg"width="250px">
+     </marquee>
+    </div>
+    
+    <div class="copy-two">
+       <marquee>
+      
+         <h2>EDUCATION</h2> 
+      <img src="https://mechnido.files.wordpress.com/2021/11/webinar-05-recent-trends-in-welding-technology.png" height="250px" width="250px">
+         <img src="https://mechnido.files.wordpress.com/2020/11/img-20200225-wa0050.jpg" height="250px" width="250">
+      <img src="https://www.maacindia.com/images/courses/course-img-35.jpg" height="250px" width="250px">
+     </marquee>
+    </div>
+
+
+    {% include "footer.html"%} 
+    {% include "script.html"%}
+
+  </body>
+</html>
+
+    

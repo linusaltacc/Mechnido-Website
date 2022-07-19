@@ -106,7 +106,7 @@ class PaymentView(View):
 
 
 class HomeView(ListView):
-    template_name = "index.html"
+    template_name = "mech.html"
     queryset = Item.objects.filter(is_active=True)
     context_object_name = 'items'
 
