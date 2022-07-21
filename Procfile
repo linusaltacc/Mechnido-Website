@@ -1,1 +1,1 @@
-web: gunicorn Mechnido-Website.wsgi --log-file -
+web: gunicorn demo.wsgi --log-file -
