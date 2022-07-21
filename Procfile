@@ -1,1 +1,1 @@
-worker: python3 manage.py runserver
+web: gunicorn Mechnido-Website.wsgi -- log-file -
