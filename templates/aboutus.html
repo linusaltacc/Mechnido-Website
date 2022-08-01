@@ -1,0 +1,88 @@
+{% load static %}
+<html>
+  <head>
+    {% include "header.html" %}
+    <style>
+        *{
+            margin:0;
+        }
+        .aboutus_container{
+        width:100%;
+        height:100vh;
+        background-image:url(https://cdn.wallpapersafari.com/96/69/WLRzuf.jpg);
+        background-size:cover;
+        background-position:center;
+        background-repeat:repeat;
+        transition:5s;
+        
+        animation-name:animate ;
+        animation-direction: alternate-reverse;
+        animation-duration:30s ;
+        animation-fill-mode:forwards ;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+        animation-timing-function: ease-in-out;
+        }
+        @keyframes animate{
+        
+        0%{
+            background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9ihqu82Mx6sv4FE3lG4sW5F5JA0Rfgz6Yjw&usqp=CAU);
+        }
+        20%{
+            background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmNGf2XqJrtkRcodHi7mm6g17Xw-oGApPl1Q&usqp=CAU);
+        }
+        40%{
+            background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZiYP9ykQ-yXYUKN49Xd1Va7k18EsiGbkesA&usqp=CAU);
+        }
+        60%{
+            background-image:url(https://image.winudf.com/v2/image/Y29tLnVsdHJhNGtXYWxscGFwZXJzX3NjcmVlbl8wXzE1MjY1OTAzODdfMDU0/screen-0.jpg?fakeurl=1&type=.webp);
+        }
+        80%{
+            background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5OuyF7hCb5zeLJWfTd_x1GYI4BjFV1uKq0w&usqp=CAU);
+        }
+        100%{
+            background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1IodAaOoL32wE_U8SCgJtTnohPRjaTFbGlA&usqp=CAU);
+        }
+        
+        }
+        .aboutus_container{
+        width:100%;
+        margin:0px ;
+        text-align:center;
+        color:white;
+        
+        }
+        .aboutus_container h1{
+        font-size:60px;
+        
+        }
+        .aboutus_container h3{
+        width:60%;
+        margin:20px auto 100px;
+        line-height:35px;
+        font-size:17px;
+            color:red;
+        }
+    </style>
+  </head>
+  <body>
+    {% include "nav.html"%}
+    <div class="aboutus_container">
+      <h1>ABOUT US</h1>
+         <h3>M/S MECHNIDO is an Emerging Enterprise
+Started In 2018 At Coimbatore, Tamilnadu,
+Primarily To Cater The Captive Needs Of Local
+Industry. Early In Our Inception, We Carved A
+Unique Business Model To Success With The State
+Of The Art Infrastructure, A Team Of Young &
+Energitic Engineers And Wide Range Of Products
+With Excellence In Quality, Working In The Field
+Of Design And Fabrication Of Automobile Parts.
+We Are Customizing Motorsports Parts As Per The
+Requirements Of Customers Which Will Match
+Their Design, Comfort, And Priority As Well.</h3>
+</div>
+{% include "footer.html"%} 
+{% include "script.html"%}
+      </body>
+    </html>

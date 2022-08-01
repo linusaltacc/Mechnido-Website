@@ -110,6 +110,10 @@ class HomeView(ListView):
     queryset = Item.objects.filter(is_active=True)
     context_object_name = 'items'
 
+class About(ListView):
+    template_name = "aboutus.html"
+    queryset = Item.objects.filter(is_active=True)
+    context_object_name = 'items'
 
 class OrderSummaryView(LoginRequiredMixin, View):
     def get(self, *args, **kwargs):
