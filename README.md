@@ -9,7 +9,7 @@
 
 `source env/bin/activate`
 
-# For Window
+# For Windows
 
 `env\scripts\activate`
 
